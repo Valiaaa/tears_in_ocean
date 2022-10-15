@@ -159,6 +159,7 @@ details[open] summary:after {
 
 ul {
   width: 104px;
+  height: 110px;
   background: transparent;
   position: absolute;
   top: calc(100% + .5rem);
@@ -243,4 +244,43 @@ label span {
   width: 1rem;
   height: 1rem;
   border: 1px solid #727272;
+}
+
+
+/* FAKE SELECT 2 */
+
+summary.radios2 {
+    counter-reset: radios2;
+}
+
+summary.radios2:before {
+    content: var(--selection);
+}
+
+input[type=radio2] {
+    counter-increment: radios;
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+input[type=radio2]:checked {
+    display: inline;
+    --display: block;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 1px;
+    color: var(--light);
+    cursor: pointer;
+}
+
+input[type=radio2]:after {
+    content: attr(title);
+    display: inline;
+}
+
+ul.list2 {
+    counter-reset: labels;
 }
