@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+:root {
+    --light: #CBCBAB;
+    --blue: #334289;
+    --dark: #1B1937;
+    --grey: #999999;
+}
+
+body {
+    background: linear-gradient(var(--blue) 0%, var(--dark) 85%);
+    background-attachment: fixed;
+    margin: 12px 16px;
+    cursor: default;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 1px;
+    color: var(--light);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: var(--light);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 10px;
+}
+
+hr {
+    width: 100%;
+    height: 2px;
+    border: none;
+    background: var(--light);
+}
+
+a:hover, #play:hover {
+    text-shadow: 0 0 5px var(--light);
+    cursor: pointer;
+}
+
+#tickets, #check {
+    width: fit-content;
+    padding: 6px 12px 8px 12px;
+    border: 2px solid var(--light);
+    position: absolute;
+    top: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+}
+
+#tickets:hover, #check:hover {
+    text-shadow: 0 0 5px var(--light);
+    box-shadow: 0 0 5px var(--light);
+    cursor: pointer;
+}
+
+#check:hover {
+    cursor: not-allowed;
+}
+
+#title {
+    width: 18%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6vh;
+}
+
+.left {
+    margin-left: 30%;
+}
+
+.right {
+    margin-right: 30%;
+    text-align: right;
+}
+
+
+/*selecter style*/
+
+details {
+  position: relative;
+  width: 100px;
+  margin-right: 30%;
+  float: right;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 1px;
+  color: var(--light);
+  cursor: pointer;
+  border: 2px solid var(--light);
+  transform: translate(0, -102px);
+}
+
+details[open] {
+  z-index: 1;
+}
+
+summary {
+  padding: 0px 12px 8px 12px;
+  background-color: transparent;
+  list-style: none;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary:before {
+  content: '';
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+summary:after {
+  content: '';
+  display: block;
+  float: right;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  transform: rotate(45deg) translate(10px,10px);
+  transform-origin: center center;
+  transition: transform ease-in-out 100ms;
+}
+
+summary:focus {
+  outline: none;
+}
+
+details[open] summary:after {
+  transform: rotate(-45deg) translate(-11px, 6px);
+}
+
+ul {
+  width: 104px;
+  background: transparent;
+  position: absolute;
+  top: calc(100% + .5rem);
+  left: -2px;
+  padding: 6px 12px 8px 12px;
+  margin: 0;
+  box-sizing: border-box;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 2px solid var(--light);
+}
+
+li {
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--light);
+  list-style: none;
+}
+
+li:first-child {
+  padding-top: 0;
+}
+
+li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+	}
+
+/* FAKE SELECT */
+
+summary.radios {
+  counter-reset: radios;
+}
+
+summary.radios:before {
+  content: var(--selection);
+}
+
+input[type=radio] {
+  counter-increment: radios;
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+input[type=radio]:checked {
+  display: inline;
+  --display: block;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 1px;
+  color: var(--light);
+  cursor: pointer;
+}
+
+input[type=radio]:after {
+  content: attr(title);
+  display: inline;
+}
+
+ul.list {
+  counter-reset: labels;
+}
+
+label {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+label span {
+  --display: none;
+  display: var(--display);
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #727272;
+}
