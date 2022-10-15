@@ -218,6 +218,10 @@ li:last-child {
 
 /* FAKE SELECT */
 
+details:hover {
+    box-shadow: 0 0 5px var(--light);
+}
+
 summary.radios {
   counter-reset: radios;
 }
