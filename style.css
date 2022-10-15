@@ -54,6 +54,20 @@ hr {
     z-index: -1;
 }
 
+.bgv {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    width: 40vw;
+    height: 50vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
 a:hover, #play:hover {
     text-shadow: 0 0 5px var(--light);
     cursor: pointer;
