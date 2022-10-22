@@ -82,4 +82,19 @@ $(document).ready(function(){
     }
     }, 0);
     
+    $("#play").click(function(){
+        var output;
+        var result = Array(3);
+        result[0] = "<video width='100%' height='100%' autoplay><source src='video/summer cozy.MP4' type='video/mp4'>Your browser does not support the video tag.</video>";
+        result[1] = "<video width='100%' height='100%' autoplay><source src='video/you nuan chi.MP4' type='video/mp4'>Your browser does not support the video tag.</video>";
+        result[2] = "<video width='100%' height='100%' autoplay><source src='video/crash for.MP4' type='video/mp4'>Your browser does not support the video tag.</video>";
+
+        var Num = Math.floor(Math.random() * 3);
+        var output = result [Num];
+
+        $(".bgv").html(output);
+        $("#title").css({"display":"none", "opacity":"0"})
+        $("#title2").css({"display":"block", "opacity":"1"})
+    });
+
 });
