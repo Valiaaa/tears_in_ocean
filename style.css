@@ -67,7 +67,7 @@ img {
   object-fit: cover;
 }
 
-.bgv {
+.bgv, .bgv2 {
     position: absolute;
     margin: auto;
     left: 0;
@@ -459,7 +459,7 @@ ul.list2 {
     transform: translateY(27px);
   }
 
-  .bgv {
+  .bgv, .bgv2 {
     width: 60vw;
     height: 60vh;
   }
@@ -511,7 +511,7 @@ ul.list2 {
     transform: rotate(-45deg) translate(-2px, 2px);
   }
 
-  .bgv {
+  .bgv, .bgv2 {
     width: 70vw;
     height: 70vh;
   }

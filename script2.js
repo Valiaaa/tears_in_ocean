@@ -84,12 +84,15 @@ $(document).ready(function(){
     
     $("#play").click(function(){
         var output;
-        var result = Array(3);
+        var result = Array(6);
         result[0] = "<video width='100%' height='100%' autoplay><source src='video/summer cozy.MP4' type='video/mp4'>Your browser does not support the video tag.</video>";
         result[1] = "<video width='100%' height='100%' autoplay><source src='video/you nuan chi.MP4' type='video/mp4'>Your browser does not support the video tag.</video>";
         result[2] = "<video width='100%' height='100%' autoplay><source src='video/crash for.MP4' type='video/mp4'>Your browser does not support the video tag.</video>";
+        result[3] = "<video width='100%' height='100%' autoplay><source src='video/vodka.MP4' type='video/mp4'>Your browser does not support the video tag.</video>";
+        result[4] = "<video width='100%' height='100%' autoplay><source src='video/orange ocean.MP4' type='video/mp4'>Your browser does not support the video tag.</video>";
+        result[5] = "<video width='100%' height='100%' autoplay><source src='video/dig.MP4' type='video/mp4'>Your browser does not support the video tag.</video>";
 
-        var Num = Math.floor(Math.random() * 3);
+        var Num = Math.floor(Math.random() * 6);
         var output = result [Num];
 
         $(".bgv").html(output);
