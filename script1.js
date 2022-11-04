@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var PerformanceDate = new Date("Nov 8, 2022 20:00:00").getTime();
+    var PerformanceDate = new Date("Oct 28, 2022 20:00:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
