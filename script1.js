@@ -21,19 +21,6 @@ $(document).ready(function(){
     document.getElementById("time").innerHTML = "+ " + days + "D " + hours + "H "
     + minutes + "M " + seconds + "S";
 
-    // If the pass the performance
-    if (distance < 0) {
-        var distance = now - PerformanceDate;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        document.getElementById("time").innerHTML = "- " + days + "D " + hours + "H "
-        + minutes + "M " + seconds + "S";
-        $("#tickets").hide();
-        $("#archive").show();
-    }
-
     //img changes depending on date
     if (days > 5) {
         $(".bg").html("<img src='pic/6.png'>")
@@ -47,6 +34,20 @@ $(document).ready(function(){
         $(".bg").html("<img src='pic/2.png'>")
     } else {
         $(".bg").html("<img src='pic/1.png'>")
+    }
+
+    // If the pass the performance
+    if (distance < 0) {
+        var distance = now - PerformanceDate;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("time").innerHTML = "- " + days + "D " + hours + "H "
+        + minutes + "M " + seconds + "S";
+        $("#tickets").hide();
+        $("#archive").show();
+        $(".bg").html("<img src='pic/1.png'>");
     }
 
     }, 0);
